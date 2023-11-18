@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   </head>
   <body>
@@ -16,7 +16,9 @@
     <script src="test.js", type="module"></script>
 	<script src="api.js" type="module"></script>
     <script type="module">
-        import {get_user, getTasks} from "./api.js"
+        import {get_user, getTasks, auth} from "./api.js"
+        auth("cb62ff98-96ef-49ff-9abd-81c1974f6f44")
+        console.log(get_user())
         console.log(getTasks('1', "today"))
     </script>
   </body>
