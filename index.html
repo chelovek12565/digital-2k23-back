@@ -18,8 +18,8 @@
     <script type="module">
         import {get_user, getTasks, auth} from "./api.js"
         auth("cb62ff98-96ef-49ff-9abd-81c1974f6f44")
-        console.log(get_user())
-        console.log(getTasks('1', "today"))
+        // console.log(get_user())
+        console.log(await getTasks('1', "today"))
     </script>
   </body>
 </html>

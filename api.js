@@ -51,7 +51,7 @@ function get_user() {
   }
 }
 
-function getTasks(projectId='', indate='') { 
+async function getTasks(projectId='', indate='') { 
   if (ifAuth()) {
     if (indate === "today") {
       var date = new Date()
@@ -69,7 +69,7 @@ function getTasks(projectId='', indate='') {
     console.log(url)
     let res = fetch(url, {
       headers: {Authorization: 'Bearer ' + Cookies.get('token')}
-        }).then(res => res.json()).then(data => data.tasks)
+        }).then(res => res.json()).then(json => json.tasks)
     return res
   }
   else {
